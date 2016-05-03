@@ -99,7 +99,6 @@
 # audio
 /dev/seiren               0660   system     audio
 
-
 # sensor sysfs properties
 /sys/devices/virtual/input/input*	poll_delay	0660	system	radio
 /sys/devices/virtual/input/input*	enable		0660	system	radio
