@@ -2,6 +2,7 @@ import init.universal5433.usb.rc
 import init.wifi.rc
 import init.carrier.rc
 import init.baseband.rc
+import init.fac.rc
 
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug
@@ -22,10 +23,6 @@ on init
 
     symlink /data/app /factory
 
-
-    mkdir /efs 0771 radio system
-    symlink /dev/block/mmcblk0p13 /dev/mbin0
-    restorecon /dev/mbin0
 
     # msockets for modem sockets with same permissions as /dev/sockets
     # except that the owner is system and part of radio group
@@ -339,16 +336,6 @@ on fs
     chmod 0660 /sys/class/android_usb/android0/terminal_version
     chown system system /sys/class/android_usb/android0/terminal_version
 
-# for datarouter
-    chown system system /dev/dun
-    chown system system /dev/ttyGS0
-    chown system system /dev/ttyGS1
-    chown system system /dev/ttyGS2
-    chown system system /dev/ttyGS3
-# MIF
-    chown radio radio /sys/devices/virtual/misc/multipdp/waketime
-    chmod 0660 /sys/devices/virtual/misc/umts_dm0/dm_state
-    chown radio system /sys/devices/virtual/misc/umts_dm0/dm_state
 
 # Permissions for backlight
     chown system system /sys/class/backlight/panel/brightness
@@ -430,6 +417,8 @@ on fs
     mkdir /dev/validity 0770 system system
 # Fingerprint_sensor
     chown system radio /sys/class/fingerprint/fingerprint/type_check
+    chown system radio /sys/class/fingerprint/fingerprint/name
+    chown system radio /sys/class/fingerprint/fingerprint/vendor
 # Accelerometer_sensor
     chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
     chown system radio /sys/class/sensors/accelerometer_sensor/calibration

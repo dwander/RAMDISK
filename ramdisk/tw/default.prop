@@ -18,6 +18,6 @@ debug.atrace.tags.enableflags=0
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.date=Mon May 16 12:10:38 KST 2016
-ro.bootimage.build.date.utc=1463368238
-ro.bootimage.build.fingerprint=samsung/treltektt/treltektt:6.0.1/MMB29K/N910KKTU2DPE2:user/test-keys
+ro.bootimage.build.date=Tue Jun 14 14:11:54 KST 2016
+ro.bootimage.build.date.utc=1465881114
+ro.bootimage.build.fingerprint=samsung/tre3caltektt/tre3caltektt:6.0.1/MMB29K/N916KKTU2DPF4:user/test-keys
