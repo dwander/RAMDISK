@@ -893,6 +893,8 @@
 /system/bin/rild_sp u:object_r:rild_exec:s0
 /system/bin/cp_diskserver u:object_r:cp_diskserver_exec:s0
 
+/system/bin/phasecheckserver u:object_r:phasecheckserver_exec:s0
+
 /dev/block/zram0 u:object_r:zram_block_device:s0
 
 /system/bin/nvitemd u:object_r:nvitemd_exec:s0
@@ -1031,6 +1033,9 @@
 /dev/timerirq	u:object_r:timerirq_device:s0
 /dev/ttyGS[0-9]*	u:object_r:usb_serial_device:s0
 /dev/ttyUSB[0-9]*	u:object_r:usb_device:s0
+# SEA_site_L#124; requested by yeonghyo.jeon
+# the B2B client requests some specific path range such as /dev/ttyUSB0 ~ /dev/ttyUSB30, /dev/ttyACM0 ~ /dev/ttyACM30
+/dev/ttyACM[0-9]*	u:object_r:usb_device:s0
 /dev/t-base-tui                    u:object_r:tui_device:s0
 /dev/tuihw	u:object_r:tz_device:s0
 /dev/tzdev	u:object_r:tz_device:s0

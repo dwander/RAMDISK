@@ -158,6 +158,7 @@ sprdsimphonebook                          u:object_r:radio_service:s0
 sprd_phone                                u:object_r:radio_service:s0
 security                                  u:object_r:system_server_service:s0
 board_score                               u:object_r:system_server_service:s0
+media.VideoCallEngineService              u:object_r:mediaserver_service:s0
 phasechecknative                          u:object_r:system_server_service:s0
 #line 1 "vendor/samsung/common/sepolicy/service_contexts"
 ############ aosp and sec_common #############
@@ -395,6 +396,7 @@ SamsungAudioFXService                       u:object_r:system_server_service:s0
 SEAMService                                 u:object_r:system_server_service:s0
 vpn_policy                                  u:object_r:system_server_service:s0
 wifi_policy                                 u:object_r:system_server_service:s0
+biometric_service                           u:object_r:system_server_service:s0
 
 ############ qcom_common #############
 listen.service                              u:object_r:adsprpcd_service:s0
