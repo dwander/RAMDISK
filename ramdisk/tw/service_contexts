@@ -255,6 +255,8 @@ com.samsung.android.jam.IAndroidShm         u:object_r:jackservice_service:s0
 com.samsung.android.jam.IJackService        u:object_r:jackservice_service:s0
 # SEA_site_M_OS#113, tigerservice
 com.samsung.srk.tigerkeystoreprovider.ITigerService               u:object_r:tigerservice_service:s0
+# SEA_site_M_OS#150, seandroid/board/Request/view/21883039
+TigerSskdsService               			u:object_r:tigerservice_service:s0
 media.mediacapture                          u:object_r:mediaserver_service:s0
 media.transcoder                            u:object_r:mediaserver_service:s0
 com.broadcom.nfc.Factory                    u:object_r:nfc_service:s0
